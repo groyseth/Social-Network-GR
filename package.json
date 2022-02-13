@@ -1,0 +1,26 @@
+{
+  "name": "social-network-gr",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "seed": "node seeds/seed.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/groyseth/Social-Network-GR.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/groyseth/Social-Network-GR/issues"
+  },
+  "homepage": "https://github.com/groyseth/Social-Network-GR#readme",
+  "dependencies": {
+    "express": "^4.17.2",
+    "mongoose": "^6.2.1",
+    "mongoose-seed": "^0.6.0"
+  }
+}
