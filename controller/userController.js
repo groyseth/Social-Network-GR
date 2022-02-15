@@ -44,12 +44,14 @@ module.exports = {
       { $pull: { friends: req.params.friendId }  },
       { runValidators: true, new: true }
     )
-      .then((video) =>
-        !video
+      .then((friend) =>
+        !friend
           ? res.status(404).json({ message: 'No video with this id!' })
-          : res.json(video)
+          : res.json(friend)
       )
-      .catch((err) => res.status(500).json(err));
+      .catch((err) => {
+        console.log(err);
+        res.status(500).json(err)});
   },
 };
 //work on casscade delete
