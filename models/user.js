@@ -18,6 +18,7 @@
 
 const { Schema, model } = require('mongoose');
 
+// console.log(reaction);
 const userSchema = new Schema(
   {
     username: {
@@ -38,15 +39,18 @@ const userSchema = new Schema(
     thoughts: [
             {
               type: Schema.Types.ObjectId,
-              ref: 'Thought',
+              ref: 'Thoughts',
             },
           ],
     friends: [
         {
             type: Schema.Types.ObjectId,
             ref: 'User',
+            // default: 0,
           },
     ],
+
+    
   },
     {
       toJSON: {
@@ -55,18 +59,19 @@ const userSchema = new Schema(
       id: false,
     }
   );
-  
-  // Create a virtual property `upvoteCount` that gets the amount of comments per user
+  // console.log(userSchema);
+ 
   userSchema
     .virtual('friendCount')
-    // Getter
+    
     .get(function () {
-      return this.friends;
+      return this.friends?.length;
 });
     
-  // })
-// })
-// Create a virtual called `friendCount` that retrieves the length of the user's `friends` array field on query.
+  
+// postSchema.virtual('commentCount').get(function () {
+//   return this.comments.length;
+// });
 
 const User = model('User', userSchema);
 
