@@ -12,4 +12,4 @@ const userData = [
         "email": "this@email.com"
     }
 ]
-module.exports = {userData};
+module.exports = { userData };

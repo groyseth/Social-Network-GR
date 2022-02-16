@@ -1,5 +1,6 @@
 const connection = require('../config/connection');
 const { User, Thoughts } = require('../models');
+const reactionSchema = require('../models/reaction')
 // const reactionSchema = require('../models/reaction')
 const  {userData}  = require('./userData');
 const {thoughtData} = require('./thoughtData');
@@ -23,8 +24,10 @@ connection.once('open', async () => {
 console.log(reactionData);
 
 
-  await User.insertMany(userData)
-  await Thoughts.insertMany(thoughtData, [reactionData]);
+  await User.insertMany(userData);
+  await Thoughts.insertMany(thoughtData);
+  // await Thoughts.insertMany.reactionSchema{reactionData}
+
 
   console.info('Seeding complete! 🌱');
   process.exit(0);

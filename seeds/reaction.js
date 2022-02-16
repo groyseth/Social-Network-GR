@@ -1,15 +1,15 @@
 const reactionData = [
     {
         "reactionBody": "react on this body",
-        "username": "clank"
+        "username": "grant"
     },
     {
         "reactionBody": "reac body",
-        "username": "zack"
+        "username": "anna"
     },
     {
         "reactionBody": "react",
-        "username": "mark"
+        "username": "phill"
     },
 ]
 module.exports = {reactionData};

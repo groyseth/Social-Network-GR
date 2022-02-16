@@ -12,12 +12,12 @@ module.exports = {
 
             // .select('__v')
             .populate('reaction')
-            // .populate('userId')
+            .populate('userId')
             .then(async (reaction) => {
 
                 return res.json(reaction);
             })
-           
+            
             .catch((err) => {
                 console.log(err);
                 return res.status(500).json(err);
@@ -52,22 +52,32 @@ module.exports = {
             .then((userData) => {
                 arr.push(userData);
                 
-                res.json(arr)})
+                res.json({message: "thought created!"})})
             .catch((err) => res.status(500).json(err));
     },
     // (req.params.friendId, {$push:{friends: req.params.userId}}))
 
+    updateThought(req, res) {
+        Thoughts.findOneAndUpdate({ _id: req.params.userId }, { $set: { thoughtText: req.body.thoughtText } })
+          .then((dbUserData) => res.json({message: "thought updated!"}))
+          .catch((err) => {
+            console.log(err);{
+
+                console.log(err);
+            res.status(500).json(err)
+            }
+          });
+      },
+
+
+
+
+
+
+
     deleteThought(req, res) {
         Thoughts.findOneAndRemove({ _id: req.params.userId })
-        //   .then((video) =>
-        //     !video
-        //       ? res.status(404).json({ message: 'No video with this id!' })
-        //       : User.findOneAndUpdate(
-        //           { videos: req.params.videoId },
-        //           { $pull: { videos: req.params.videoId } },
-        //           { new: true }
-        //         )
-        //   )
+        
           .then((user) =>
             !user
               ? res
@@ -89,7 +99,7 @@ module.exports = {
                 .then((user) =>
                 !user
                     ? res.status(404).json({ message: 'No user with that ID' })
-                    : res.json(user)
+                    : res.json({message: "reaction created!"})
             )
             .catch((err) => {
                 console.log(err);
@@ -106,8 +116,8 @@ module.exports = {
         )
           .then((video) =>
             !video
-              ? res.status(404).json({ message: 'No video with this id!' })
-              : res.json(video)
+              ? res.status(404).json({ message: 'No reaction with this id!' })
+              : res.json({message: "reaction deleted!"})
           )
           .catch((err) => res.status(500).json(err));
       },

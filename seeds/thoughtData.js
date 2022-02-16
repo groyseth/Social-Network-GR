@@ -1,15 +1,15 @@
 const thoughtData = [
     {
         "thoughtText": "This is alright",
-        "userName": "Shrek"
+        "username": "anna"
     },
     {
         "thoughtText": "This not cool",
-        "userName": "steve"
+        "username": "grant"
     },
     {
         "thoughtText": "This is walfles",
-        "userName": "donkey"
+        "username": "phill"
     },
     
   

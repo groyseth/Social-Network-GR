@@ -42,10 +42,20 @@ const reactionSchema = new Schema(
       type: String,
       required: true,
     },
-    createdAt: {
-      type: Date,
-      default: Date.now,
-      get: time => new Date(time).toLocaleDateString()
-    },
-  })
+    createdAt: { 
+      type: Date, 
+      default: Date.now, 
+      get: time => new Date(time).toLocaleDateString()    
+       },
+   
+  },
+  {
+  toJSON: {
+          
+    getters: true,
+  },
+  id: false,
+}
+)
+
 module.exports = reactionSchema;
