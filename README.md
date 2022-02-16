@@ -180,6 +180,8 @@ This will not be a model, but rather will be used as the `reaction` field's subd
 * `GET` to get a single thought by its `_id`
 
 * `POST` to create a new thought (don't forget to push the created thought's `_id` to the associated user's `thoughts` array field)
+<!-- todo -->
+
 
 ```json
 // example data

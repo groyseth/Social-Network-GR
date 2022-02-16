@@ -44,10 +44,12 @@ const thoughtSchema = new Schema(
         default: Date.now, 
         get: time => new Date(time).toLocaleDateString()    
          },
-    userName: {
+    username: {
       type: String,
       required: true,
     },
+   
+    
     
     reaction: [reactionSchema]
    
