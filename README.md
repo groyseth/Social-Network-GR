@@ -4,14 +4,14 @@
   
   
 
-[video link](https://drive.google.com/file/d/17-Qh-MYwTTsSJaoBOeCvte27kE8yUDZR/view)
+
 
     
   
 ## Description  
+[video link](https://drive.google.com/file/d/17-Qh-MYwTTsSJaoBOeCvte27kE8yUDZR/view)
 
-
-This social network project deminstrates 
+This social network project deminstrates the use of the mongoose package. Allows the user to utilize routes to add, post, delete and update in the user and thought fields. It also deminstrates the use of visuals, getters and sub documents. This is possible with the utilization of 'MongoDBCompass'.  
 ## Table of Contents 
 
 - [Installation](#installation)
@@ -20,17 +20,17 @@ This social network project deminstrates
 - [Questions](#questions)
 
 ## Installation
-you will need to install mysql2, dotenv, express and sequelize using 'npm i' in the terminal.
+User will need to do a git clone and run the code. Next you need to install express and mongoose using 'npm i' in the terminal. Once installed user can eather 'npm run seed' or open user choice of api client.
 
 ## Usage
-Do a git clone and run program or 
-[Heroku](https://mysterious-crag-93080.herokuapp.com/)
+Follow to routes and models to make sure user is inputing the correct keys and data types. Follow the video link for details!
+
 ## Credits
 Made by Grant Royseth!
 
 ## What I learned and challenges
 
-I learned more about handlebars with multiple layouts but, I struggeled with moving table data around to display. In the future this will be functional!
+I learned the basics of using the mongo database along with mongoose. I'd say the challenge I faced was getting the corrisponding data to do a cascade delete. Ex delete the friends in both users. In the end I had a good time learning something new!
 
 ## Questions
 My profile page [GitHub](https://github.com/groyseth)
