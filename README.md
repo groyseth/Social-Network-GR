@@ -9,7 +9,7 @@
     
   
 ## Description  
-[video link](https://drive.google.com/file/d/17-Qh-MYwTTsSJaoBOeCvte27kE8yUDZR/view)
+[Video Link Deminstation](https://drive.google.com/file/d/17-Qh-MYwTTsSJaoBOeCvte27kE8yUDZR/view)
 
 This social network project deminstrates the use of the mongoose package. Allows the user to utilize routes to add, post, delete and update in the user and thought fields. It also deminstrates the use of visuals, getters and sub documents. This is possible with the utilization of 'MongoDBCompass'.  
 ## Table of Contents 
